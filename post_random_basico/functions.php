@@ -13,7 +13,7 @@ function ajax_mostrar_random(){
 	while (have_posts()) { the_post();
 		$html .= '- '.get_the_title().'<br>';
 	}
-    wp_reset_query();
+	wp_reset_query();
 
 	echo $html;
 	exit();
