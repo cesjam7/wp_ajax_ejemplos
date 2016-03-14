@@ -3,11 +3,11 @@
 add_action('wp_ajax_mostrar_random', 'ajax_mostrar_random');
 function ajax_mostrar_random(){
 
-    $cantidad = $_REQUEST['cantidad_post'];
-    $html = "";
-
+	$cantidad = $_REQUEST['cantidad_post'];
+	$html = "";
+	
 	query_posts(array(
-        'orderby'   =>  'rand',
+		'orderby'   =>  'rand',
 		'showposts' =>  $cantidad
 	));
 	while (have_posts()) { the_post();
